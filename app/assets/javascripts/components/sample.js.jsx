@@ -7,9 +7,16 @@ var Sample = React.createClass({
     alert(this.props.message);
   },
 
+  showProps: function() {
+    console.log(this.props.message);
+  },
+
   render: function() {
     return (
-      <div onClick={this.handleClick}>click me!</div>
+      <div className="wrap">
+        <div onClick={this.handleClick}>click me!</div>
+        <div onClick={this.showProps}>show props!</div>
+      </div>
     );
   }
 });
